@@ -20,12 +20,12 @@ userURL = userURL + name
 try:
     html = urlopen(userURL)
 except HTTPError as e:
-    print("HTTP not found. Error Code : 404. Unable to open URL")
+    print(e)
 
 try:
     bs = BeautifulSoup(html, 'html.parser')
 except URLError as e:
-    print("URL Error")
+    print(e)
 
 li = bs.find('div',{'class' :'panel-body'}).children#.find('span',{'class' : 'problem_number'})
 li = list(li)
