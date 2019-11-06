@@ -29,12 +29,11 @@ except URLError as e:
 
 li = bs.find('div',{'class' :'panel-body'}).children#.find('span',{'class' : 'problem_number'})
 li = list(li)
+totalProble = []
 for a in range(0,len(li)):
     li[a] = li[a].string
+    totalProble.append(li[a])
 
-totalProble = []
-for b in li:
-    totalProble.append(b)
 
 totalProble = list(filter(('\n').__ne__, totalProble))
 frameData = pd.DataFrame(columns = ['Question Number','Question Tite','Question URL'])
