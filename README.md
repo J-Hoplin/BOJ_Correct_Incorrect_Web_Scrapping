@@ -44,6 +44,14 @@ import numpy as np
 import os
 import sys
 
+def naviagableStringToNormalString(li,):
+    resultList = []
+    for navigableSt in li.children:
+        resultList.append(navigableSt.string)
+    resultList = list(filter(('\n').__ne__, resultList))
+    return resultList
+
+
 def makeDataFrame(li,index):
     frameData = pd.DataFrame(columns=['Question Number', 'Question Tite', 'Question URL'])
     loopCount = len(li) / 2
@@ -99,17 +107,12 @@ li2 = bs.findAll('div',{'class' : 'panel-body'})[1]
 
 CorrectIncorrect = []
 #맞은문제에 대해
-li1StringOnly = []
-for a in li.children:
-    li1StringOnly.append(a.string)
-li1StringOnly = list(filter(('\n').__ne__, li1StringOnly))
+
+li1StringOnly = naviagableStringToNormalString(li)
 CorrectIncorrect.append(li1StringOnly)
 
 #틀린문제에 대해
-li2StringOnly = []
-for b in li2.children:
-    li2StringOnly.append(b.string)
-li2StringOnly = list(filter(('\n').__ne__, li2StringOnly))
+li2StringOnly = naviagableStringToNormalString(li2)
 CorrectIncorrect.append(li2StringOnly)
 
 for cot in range(0, len(CorrectIncorrect)):
@@ -117,6 +120,7 @@ for cot in range(0, len(CorrectIncorrect)):
 
 print('Comlete to make files')
 os.system("pause")
+
 ```
 
 
