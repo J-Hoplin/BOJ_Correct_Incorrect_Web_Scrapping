@@ -4,7 +4,8 @@ from urllib.request import urlopen
 from bs4 import BeautifulSoup
 import pandas as pd
 import numpy as np
-import copy
+import os
+import sys
 
 userURL = 'https://www.acmicpc.net/user/'
 problemURL = 'https://www.acmicpc.net/problem/'
@@ -14,6 +15,7 @@ try:
     name = input(">>")
 except TypeError:
     print("Type Error. Write ID with String Type")
+    sys.exit()
 
 userURL = userURL + name
 
@@ -21,11 +23,13 @@ try:
     html = urlopen(userURL)
 except HTTPError as e:
     print(e)
+    sys.exit()
 
 try:
     bs = BeautifulSoup(html, 'html.parser')
 except URLError as e:
     print(e)
+    sys.exit()
 
 li = bs.find('div',{'class' :'panel-body'}).children#.find('span',{'class' : 'problem_number'})
 li = list(li)
@@ -52,3 +56,5 @@ while(varCount < loopCount):
     questionCount += 1
 
 frameData.to_excel(name + '의 백준 정보' + '.xlsx')
+print("Complete to make file")
+os.system("pause")
