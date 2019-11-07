@@ -1,8 +1,8 @@
-BOJ Correct Crawl
+BOJ Correct Incorrect Crawl
 ===
 ***
 
-- What for? : [백준 온라인저지](https://www.acmicpc.net/)에서 사용자가 맞은 문제들과 틀린문제들의 리스트를 엑셀로 출력해주는 프로그램입니다.
+- What for? : [백준 온라인저지](https://www.acmicpc.net/)에서 사용자가 맞은 문제들과 틀린문제들의 리스트를  엑셀로 출력해주는 프로그램입니다.
 
 - Language : Python 3.7
 
@@ -10,7 +10,7 @@ BOJ Correct Crawl
 
 - Used Modules : pandas, bs4, urllib, pyinstaller(to make exe file)
 
-- .exe file link : [here](https://drive.google.com/open?id=1jRxQ1b_yytziEfliiAEpxYKoa67gFvXq)
+- .exe file link : [here](https://drive.google.com/open?id=1LI1gXFG3z0zEue3sSu1lehAqXPJVqLQ5)
 
 - pyinstaller command to make CLI to exe : pyinstaller -F BaekjonnCrawl.py -n BaekjonnCrawl.py
 
