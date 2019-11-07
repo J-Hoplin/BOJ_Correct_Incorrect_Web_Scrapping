@@ -2,7 +2,7 @@ BOJ Correct Crawl
 ===
 ***
 
-- What for? : [백준 온라인저지](https://www.acmicpc.net/)에서 사용자가 맞은 문제들과 틀린문제들의 리스트를 엑셀로 출력해주는 프로그램입니다.
+- What for? : [백준 온라인저지](https://www.acmicpc.net/)에서 사용자가 맞은 문제들과 틀린문제들의 리스트를  엑셀로 출력해주는 프로그램입니다.
 
 - Language : Python 3.7
 
