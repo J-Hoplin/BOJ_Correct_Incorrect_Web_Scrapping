@@ -160,7 +160,7 @@ xl_list = [file for file in xl_list if file.endswith("의 백준 푼문제 리�
 for t in range(0,len(xl_list)):
     if name == xl_list[t].split(' ')[0].split('의')[0]:
         before_data_exist = True
-        prev_data = pd.read_excel(name + '의 백준 푼문제 리스트' + '.xlsx')
+        prev_data = pd.read_excel(name + '의 백준 푼문제 리스트' + '.xlsx',index_col = 0)
         prev_data_Qlist = list(prev_data['Question Number'])
         for n in range(0, len(li1StringOnly), 2):
             if int(li1StringOnly[n]) not in prev_data_Qlist:
