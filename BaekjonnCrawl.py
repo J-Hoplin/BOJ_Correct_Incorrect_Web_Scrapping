@@ -35,7 +35,7 @@ def makeDataFrame(li,index):
         df = pd.DataFrame(
             data={'Question Number': li[varCount], 'Question Tite': li[varCount + 1],
                   'Question URL': problemURL + str(li[varCount]),
-                  'Updated Time' : "%04d-%02d-%02d %02d:%02d:%02d" % (now.tm_year, now.tm_mon, now.tm_mday, now.tm_hour, now.tm_min, now.tm_sec)},
+                  'Updated Time': "%04d-%02d-%02d %02d:%02d:%02d" % (now.tm_year, now.tm_mon, now.tm_mday, now.tm_hour, now.tm_min, now.tm_sec)},
             index=[questionCount])
         if varCount == 0:
             frameData = df
@@ -60,8 +60,7 @@ def add_New(li):
         df = pd.DataFrame(
             data={'Question Number': li[varCount], 'Question Tite': li[varCount + 1],
                   'Question URL': problemURL + str(li[varCount]),
-                  'Updated Time': "%04d-%02d-%02d %02d:%02d:%02d" % (
-                  now.tm_year, now.tm_mon, now.tm_mday, now.tm_hour, now.tm_min, now.tm_sec)},
+                  'Updated Time': "%04d-%02d-%02d %02d:%02d:%02d" % (now.tm_year, now.tm_mon, now.tm_mday, now.tm_hour, now.tm_min, now.tm_sec)},
             index=[questionCount])
         if varCount == 0:
             frameData = df
@@ -72,6 +71,7 @@ def add_New(li):
         questionCount += 1
     new_sync_data = pd.concat([prev_data,frameData])
     new_sync_data.to_excel(name + '의 백준 푼문제 리스트' + '.xlsx')
+    print("Complete to make Correct question list excel file ( 1 / 2 )")
 
 userURL = 'https://www.acmicpc.net/user/'
 problemURL = 'https://www.acmicpc.net/problem/'
@@ -115,7 +115,7 @@ xl_list = [file for file in xl_list if file.endswith("의 백준 푼문제 리�
 for t in range(0,len(xl_list)):
     if name == xl_list[t].split(' ')[0].split('의')[0]:
         before_data_exist = True
-        prev_data = pd.read_excel(name + '의 백준 푼문제 리스트' + '.xlsx')
+        prev_data = pd.read_excel(name + '의 백준 푼문제 리스트' + '.xlsx',index_col = 0)
         prev_data_Qlist = list(prev_data['Question Number'])
         for n in range(0, len(li1StringOnly), 2):
             if int(li1StringOnly[n]) not in prev_data_Qlist:
@@ -137,4 +137,3 @@ for cot in range(0, len(CorrectIncorrect)):
 
 print('Comlete to make files')
 os.system("pause")
-
