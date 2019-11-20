@@ -72,6 +72,7 @@ def add_New(li):
         questionCount += 1
     new_sync_data = pd.concat([prev_data,frameData])
     new_sync_data.to_excel(name + '의 백준 푼문제 리스트' + '.xlsx')
+    print("Complete to make Correct question list excel file ( 1 / 2 )")
 
 userURL = 'https://www.acmicpc.net/user/'
 problemURL = 'https://www.acmicpc.net/problem/'
