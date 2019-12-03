@@ -12,7 +12,7 @@ BOJ Correct Incorrect Crawl
 
 - Current Version.exe file link : [here](https://drive.google.com/open?id=1fGFgaXs9SbMMM8dDkKj0nJHYhdQyOZtG)
 
-- pyinstaller command to make CLI to exe : pyinstaller -F BaekjonnCrawl.py -n BaekjonnCrawl.py
+- pyinstaller command to make exe : pyinstaller -F BaekjonnCrawl.py -n BaekjonnCrawl.py
 
 ***
 
