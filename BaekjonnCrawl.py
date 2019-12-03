@@ -9,7 +9,6 @@ try:
     import sys
     import time
     import warnings
-
     warnings.filterwarnings(action='ignore')
 
     now = time.localtime()
