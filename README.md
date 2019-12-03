@@ -10,7 +10,7 @@ BOJ Correct Incorrect Crawl
 
 - Used Modules : pandas, bs4, urllib, pyinstaller(to make exe file)
 
-- .exe file link : [here](https://drive.google.com/open?id=1Ev3wJoRms5eILMkyRE5mx-pRsxahQFqa)
+- Current Version.exe file link : [here](https://drive.google.com/open?id=1fGFgaXs9SbMMM8dDkKj0nJHYhdQyOZtG)
 
 - pyinstaller command to make CLI to exe : pyinstaller -F BaekjonnCrawl.py -n BaekjonnCrawl.py
 
